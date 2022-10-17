@@ -1,5 +1,4 @@
 from pickle import NONE
-
 try: 
     a = float(input("Введите первое число: "))
     b = float(input("Введите второе число: "))
@@ -25,5 +24,5 @@ try:
         else: 
             c = a//b
     print(round(c, 3))
-except: print("Что-то пошло не так...")
+except: print("Некорректные данные...")
 
