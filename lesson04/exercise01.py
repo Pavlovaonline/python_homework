@@ -1,13 +1,3 @@
-
-# n = int(input("Введите число: "))
-# def primes_div (n):
-#     primes = []
-#     for i in range(2, n):
-#         if n % i == 0:
-#             primes += [i]
-#     return primes
-# print(primes_div(n))
-
 n = int(input("Введите число: "))
 def primes_div (n):
     count_primes = 0
