@@ -55,5 +55,3 @@ def calc_result(sp):
     last_operation(sp)
     
 calc_result(sp_text)
-
-# 1+2*3-4/5
