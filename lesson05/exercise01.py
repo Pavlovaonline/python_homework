@@ -1,6 +1,7 @@
 from random import randint
 
 candies = 2021
+initial_quantity = 2021
 max_step = 28
 print("Правила:\n\tЗа один ход вы можете взять не менее 0 и не более 28 конфет\n\tПобеждает тот, кто забирает последнюю конфету.")
 new_candies = 0
@@ -34,9 +35,9 @@ def bot_action (candies):
         if candies == 1:
             print("Вы выиграли\n\nGame over!")
         else: 
-            if candies == 2021:
+            if candies == initial_quantity:
                 step = candies % (max_step+1)
-            elif candies > (max_step+1) and candies < 2021:
+            elif candies > (max_step+1) and candies < initial_quantity:
                 step = max_step - (candies % (max_step+1))
             elif candies <= (max_step+1):
                 step = candies - 1
@@ -46,17 +47,17 @@ def bot_action (candies):
             return candies
     except: print("Что-то не так.")
 
-i = int(randint(1, 2))
-if i == 1:
+i = int(randint(1, 2)) 
+if i == 2:
     print("Бот ходит первым.")
     while candies!=0:
         if candies>0:
-            bot_action(candies)
-            human_action(candies)
-
-elif i == 2: 
+            candies = bot_action(candies)
+            candies = human_action(candies)
+            
+elif i == 1: 
     print("Вы ходите первым.")
     while candies!=0:  
         if candies>0:
-            human_action(candies)
-            bot_action(candies)
+            candies = human_action(candies)
+            candies = bot_action(candies)
