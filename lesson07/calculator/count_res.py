@@ -9,9 +9,10 @@ def read_expression():
     return str(sp_text)
 
 def get_result():
-    res = eval(read_expression())
-    return res
+    return eval(read_expression())
 
+# print(read_expression())    
+# print(get_result())
 
 
 # def read_expression():
