@@ -1,0 +1,683 @@
+{
+    "report": [
+        {
+            "ID": "0001",
+            "TV channel": "Домашний",
+            "date": "11/21/22",
+            "time": "13:49:35",
+            "programme": "Сериал",
+            "rating": "0.851",
+            "ads": "True",
+            "undefined": "43"
+        },
+        {
+            "ID": "0002",
+            "TV channel": "Домашний",
+            "date": "11/21/22",
+            "time": "15:24:07",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "1.005",
+            "ads": "False",
+            "undefined": "32"
+        },
+        {
+            "ID": "0003",
+            "TV channel": "Домашний",
+            "date": "11/21/22",
+            "time": "15:42:57",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "0.882",
+            "ads": "True"
+        },
+        {
+            "ID": "0004",
+            "TV channel": "Домашний",
+            "date": "11/21/22",
+            "time": "21:12:00",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "1.835",
+            "ads": "False"
+        },
+        {
+            "ID": "0005",
+            "TV channel": "Домашний",
+            "date": "11/21/22",
+            "time": "22:36:56",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "2.021",
+            "ads": "True"
+        },
+        {
+            "ID": "0006",
+            "TV channel": "Домашний",
+            "date": "11/22/22",
+            "time": "09:46:21",
+            "programme": "ДАВАЙ РАЗВЕДЁМСЯ!",
+            "rating": "0.568",
+            "ads": "False"
+        },
+        {
+            "ID": "0007",
+            "TV channel": "Домашний",
+            "date": "11/22/22",
+            "time": "10:52:57",
+            "programme": "ТЕСТ НА ОТЦОВСТВО",
+            "rating": "0.535",
+            "ads": "True"
+        },
+        {
+            "ID": "0008",
+            "TV channel": "Домашний",
+            "date": "11/22/22",
+            "time": "13:49:01",
+            "programme": "Сериал",
+            "rating": "0.473",
+            "ads": "True"
+        },
+        {
+            "ID": "0009",
+            "TV channel": "Домашний",
+            "date": "11/22/22",
+            "time": "15:20:09",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "0.774",
+            "ads": "False"
+        },
+        {
+            "ID": "0010",
+            "TV channel": "Домашний",
+            "date": "11/22/22",
+            "time": "16:48:01",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "1.048",
+            "ads": "True"
+        },
+        {
+            "ID": "0011",
+            "TV channel": "Домашний",
+            "date": "11/22/22",
+            "time": "21:41:09",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "1.474",
+            "ads": "False"
+        },
+        {
+            "ID": "0012",
+            "TV channel": "Домашний",
+            "date": "11/23/22",
+            "time": "13:23:18",
+            "programme": "Сериал",
+            "rating": "0.709",
+            "ads": "True"
+        },
+        {
+            "ID": "0013",
+            "TV channel": "Домашний",
+            "date": "11/23/22",
+            "time": "15:17:04",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "0.838",
+            "ads": "False"
+        },
+        {
+            "ID": "0014",
+            "TV channel": "Домашний",
+            "date": "11/23/22",
+            "time": "19:25:22",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "1.091",
+            "ads": "True"
+        },
+        {
+            "ID": "0015",
+            "TV channel": "Домашний",
+            "date": "11/23/22",
+            "time": "19:50:23",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "1.246",
+            "ads": "True"
+        },
+        {
+            "ID": "0016",
+            "TV channel": "Домашний",
+            "date": "11/23/22",
+            "time": "21:13:24",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "1.542",
+            "ads": "False"
+        },
+        {
+            "ID": "0017",
+            "TV channel": "Домашний",
+            "date": "11/24/22",
+            "time": "15:18:09",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "0.834",
+            "ads": "True"
+        },
+        {
+            "ID": "0018",
+            "TV channel": "Домашний",
+            "date": "11/24/22",
+            "time": "17:17:34",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "0.861",
+            "ads": "False"
+        },
+        {
+            "ID": "0019",
+            "TV channel": "Домашний",
+            "date": "11/24/22",
+            "time": "17:32:42",
+            "programme": "Кино на ДОМАШНЕМ",
+            "rating": "0.934",
+            "ads": "True"
+        },
+        {
+            "ID": "0020",
+            "TV channel": "ТВ3",
+            "date": "11/21/22",
+            "time": "13:47:03",
+            "programme": "Док. сериал",
+            "rating": "0.329",
+            "ads": "False"
+        },
+        {
+            "ID": "0021",
+            "TV channel": "ТВ3",
+            "date": "11/21/22",
+            "time": "23:29:41",
+            "programme": "Наследники и самозванцы",
+            "rating": "0.223",
+            "ads": "True"
+        },
+        {
+            "ID": "0022",
+            "TV channel": "ТВ3",
+            "date": "11/21/22",
+            "time": "00:34:11",
+            "programme": "Наследники и самозванцы",
+            "rating": "0.199",
+            "ads": "True"
+        },
+        {
+            "ID": "0023",
+            "TV channel": "ТВ3",
+            "date": "11/22/22",
+            "time": "21:30:13",
+            "programme": "Сериал",
+            "rating": "0.669",
+            "ads": "False"
+        },
+        {
+            "ID": "0024",
+            "TV channel": "ТВ3",
+            "date": "11/22/22",
+            "time": "22:44:07",
+            "programme": "Сериал",
+            "rating": "0.253",
+            "ads": "True"
+        },
+        {
+            "ID": "0025",
+            "TV channel": "ТВ3",
+            "date": "11/22/22",
+            "time": "23:52:47",
+            "programme": "Худ.фильм",
+            "rating": "0.242",
+            "ads": "False"
+        },
+        {
+            "ID": "0026",
+            "TV channel": "ТВ3",
+            "date": "11/23/22",
+            "time": "08:53:41",
+            "programme": "Р/б после мультфильмов",
+            "rating": "0.080",
+            "ads": "True"
+        },
+        {
+            "ID": "0027",
+            "TV channel": "ТВ3",
+            "date": "11/23/22",
+            "time": "11:40:21",
+            "programme": "Док. сериал",
+            "rating": "0.481",
+            "ads": "False"
+        },
+        {
+            "ID": "0028",
+            "TV channel": "ТВ3",
+            "date": "11/23/22",
+            "time": "12:46:59",
+            "programme": "Мистические истории",
+            "rating": "0.530",
+            "ads": "True"
+        },
+        {
+            "ID": "0029",
+            "TV channel": "ТВ3",
+            "date": "11/24/22",
+            "time": "13:37:14",
+            "programme": "Док. сериал",
+            "rating": "0.362",
+            "ads": "True"
+        },
+        {
+            "ID": "0030",
+            "TV channel": "ТВ3",
+            "date": "11/24/22",
+            "time": "23:42:37",
+            "programme": "Сериал",
+            "rating": "0.326",
+            "ads": "False"
+        },
+        {
+            "ID": "0031",
+            "TV channel": "ТВ3",
+            "date": "11/24/22",
+            "time": "00:25:52",
+            "programme": "Сериал",
+            "rating": "0.210",
+            "ads": "True"
+        },
+        {
+            "ID": "0032",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "08:07:37",
+            "programme": "10 САМЫХ",
+            "rating": "0.038",
+            "ads": "False"
+        },
+        {
+            "ID": "0033",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "09:10:40",
+            "programme": "ТИК-ТОК чарт",
+            "rating": "0.108",
+            "ads": "True",
+            "undefined": "15.607"
+        },
+        {
+            "ID": "0034",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "09:26:18",
+            "programme": "ТИК-ТОК чарт",
+            "rating": "0.157",
+            "ads": "False",
+            "undefined": "28.687"
+        },
+        {
+            "ID": "0035",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "09:49:55",
+            "programme": "ТИК-ТОК чарт",
+            "rating": "0.166",
+            "ads": "True"
+        },
+        {
+            "ID": "0036",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "10:18:39",
+            "programme": "Документальный фильм",
+            "rating": "0.164",
+            "ads": "True"
+        },
+        {
+            "ID": "0037",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "10:50:52",
+            "programme": "Документальный фильм",
+            "rating": "0.135",
+            "ads": "False"
+        },
+        {
+            "ID": "0038",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "11:34:41",
+            "programme": "ЯНАМУЗТВ",
+            "rating": "0.187",
+            "ads": "True"
+        },
+        {
+            "ID": "0039",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "11:47:38",
+            "programme": "ЯНАМУЗТВ",
+            "rating": "0.187",
+            "ads": "False"
+        },
+        {
+            "ID": "0040",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "11:47:38",
+            "programme": "ЯНАМУЗТВ",
+            "rating": "0.187",
+            "ads": "True"
+        },
+        {
+            "ID": "0041",
+            "TV channel": "Муз ТВ",
+            "date": "11/21/22",
+            "time": "21:33:19",
+            "programme": "Тор 30",
+            "rating": "0.211",
+            "ads": "False"
+        },
+        {
+            "ID": "0042",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "07:25:18",
+            "programme": "КАЖДОЕ УТРО",
+            "rating": "0.147",
+            "ads": "True"
+        },
+        {
+            "ID": "0043",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "07:47:15",
+            "programme": "КАЖДОЕ УТРО",
+            "rating": "0.099",
+            "ads": "True"
+        },
+        {
+            "ID": "0044",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "08:05:05",
+            "programme": "КАЖДОЕ УТРО",
+            "rating": "0.098",
+            "ads": "False"
+        },
+        {
+            "ID": "0045",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "08:25:11",
+            "programme": "КАЖДОЕ УТРО",
+            "rating": "0.098",
+            "ads": "True"
+        },
+        {
+            "ID": "0046",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "09:10:14",
+            "programme": "Муз-ТВ Чарт",
+            "rating": "0.038",
+            "ads": "False"
+        },
+        {
+            "ID": "0047",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "09:25:47",
+            "programme": "Муз-ТВ Чарт",
+            "rating": "0.091",
+            "ads": "True"
+        },
+        {
+            "ID": "0048",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "09:46:11",
+            "programme": "Муз-ТВ Чарт",
+            "rating": "0.136",
+            "ads": "False"
+        },
+        {
+            "ID": "0049",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "12:32:33",
+            "programme": "Юмор FM Чарт",
+            "rating": "0.140",
+            "ads": "True"
+        },
+        {
+            "ID": "0050",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "15:34:31",
+            "programme": "В десятку!",
+            "rating": "0.136",
+            "ads": "True"
+        },
+        {
+            "ID": "0051",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "21:21:29",
+            "programme": "БИТВА ПОКОЛЕНИЙ",
+            "rating": "0.107",
+            "ads": "False"
+        },
+        {
+            "ID": "0052",
+            "TV channel": "Муз ТВ",
+            "date": "11/22/22",
+            "time": "22:50:09",
+            "programme": "Pro-новости",
+            "rating": "0.163",
+            "ads": "True"
+        },
+        {
+            "ID": "0053",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "11:49:35",
+            "programme": "ЯНАМУЗТВ",
+            "rating": "0.119",
+            "ads": "False"
+        },
+        {
+            "ID": "0054",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "15:30:03",
+            "programme": "В десятку!",
+            "rating": "0.118",
+            "ads": "True"
+        },
+        {
+            "ID": "0055",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "16:13:04",
+            "programme": "Битва ФАНКЛУБОВ",
+            "rating": "0.120",
+            "ads": "False"
+        },
+        {
+            "ID": "0056",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "16:48:05",
+            "programme": "Битва ФАНКЛУБОВ",
+            "rating": "0.113",
+            "ads": "True"
+        },
+        {
+            "ID": "0057",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "19:48:59",
+            "programme": "ТИК-ТОК чарт",
+            "rating": "0.173",
+            "ads": "True"
+        },
+        {
+            "ID": "0058",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "21:31:10",
+            "programme": "Тор 30",
+            "rating": "0.188",
+            "ads": "False"
+        },
+        {
+            "ID": "0059",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "22:08:13",
+            "programme": "Тор 30",
+            "rating": "0.158",
+            "ads": "True"
+        },
+        {
+            "ID": "0060",
+            "TV channel": "Муз ТВ",
+            "date": "11/23/22",
+            "time": "00:44:23",
+            "programme": "МУЗИТИВ",
+            "rating": "0.034",
+            "ads": "False"
+        },
+        {
+            "ID": "0061",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "08:46:59",
+            "programme": "Pro-новости",
+            "rating": "0.061",
+            "ads": "True"
+        },
+        {
+            "ID": "0062",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "09:34:03",
+            "programme": "ЯНДЕКС.МУЗЫКА ЧАРТ",
+            "rating": "0.065",
+            "ads": "False"
+        },
+        {
+            "ID": "0063",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "10:12:26",
+            "programme": "Тор 30",
+            "rating": "0.107",
+            "ads": "True"
+        },
+        {
+            "ID": "0064",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "10:29:55",
+            "programme": "Тор 30",
+            "rating": "0.093",
+            "ads": "True"
+        },
+        {
+            "ID": "0065",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "10:51:17",
+            "programme": "Тор 30",
+            "rating": "0.097",
+            "ads": "False"
+        },
+        {
+            "ID": "0066",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "11:09:16",
+            "programme": "Тор 30",
+            "rating": "0.108",
+            "ads": "True"
+        },
+        {
+            "ID": "0067",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "11:29:01",
+            "programme": "Тор 30",
+            "rating": "0.103",
+            "ads": "False"
+        },
+        {
+            "ID": "0068",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "12:11:34",
+            "programme": "Плейлист. Осень",
+            "rating": "0.114",
+            "ads": "True"
+        },
+        {
+            "ID": "0069",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "12:50:05",
+            "programme": "Плейлист. Осень",
+            "rating": "0.114",
+            "ads": "False"
+        },
+        {
+            "ID": "0070",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "14:29:51",
+            "programme": "Европа Плюс топ-Чарт",
+            "rating": "0.104",
+            "ads": "True"
+        },
+        {
+            "ID": "0071",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "15:33:53",
+            "programme": "В десятку!",
+            "rating": "0.118",
+            "ads": "True"
+        },
+        {
+            "ID": "0072",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "16:29:42",
+            "programme": "Юмор FM Чарт",
+            "rating": "0.145",
+            "ads": "False"
+        },
+        {
+            "ID": "0073",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "18:10:00",
+            "programme": "Pro-новости",
+            "rating": "0.128",
+            "ads": "True"
+        },
+        {
+            "ID": "0074",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "23:46:24",
+            "programme": "Плейлист. Осень",
+            "rating": "0.044",
+            "ads": "False"
+        },
+        {
+            "ID": "0075",
+            "TV channel": "Муз ТВ",
+            "date": "11/24/22",
+            "time": "00:32:10",
+            "programme": "МУЗИТИВ",
+            "rating": "0.045",
+            "ads": "True"
+        }
+    ]
+}
