@@ -48,20 +48,29 @@ def btn_rating():
 
 def input_text():
     label_text = ttk.Label(text="Введите номер выхода, который хотите занять: ")
-    label_text.grid(row=1, column=1, padx=10, pady=10)
+    label_text.grid(row=4, column=1, padx=10, pady=10)
     entry = ttk.Entry()
     entry.grid(row=5, column=1, padx=10, pady=10)
     text = str(entry.get())
     return text
 
+def btn_add_spot():
+    btn_count = ttk.Button(text="Занять выбранное место", command = input_log.add_new_ads())
+    btn_count.grid(row=5, column=1, padx=10, pady=10)
 
+def btn_del_spot():
+    btn_count = ttk.Button(text="Удалить выбранное место", command = input_log.del_ads())
+    btn_count.grid(row=7, column=1, padx=10, pady=10)
+
+with open("C:/GB/Python/homework/lesson07/calculator/logs.txt", "a") as file:
+        file.write(input_text())
 
 btn_vacancy()
 btn_booked()
 btn_rating()
 input_text()
-
-
+btn_add_spot()
+btn_del_spot()
 
 window_calc.mainloop()
 
