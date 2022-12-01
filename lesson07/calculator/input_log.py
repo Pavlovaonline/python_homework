@@ -10,7 +10,7 @@ time_input = f"{datetime.now().hour}.{datetime.now().minute}.{datetime.now().sec
 text = user_interface.input_text()
 res =  user_interface.print_result(count_res.get_result())
 
-def save_log ():
+def save_log():
     dictionary_log = {"id:": id, "date:": date_input, "time:": time_input, "text:": text, "result:": res}
     big_dictionary.update(dictionary_log)
     

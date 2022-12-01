@@ -22,8 +22,12 @@ def print_result(res):
     result = str(count_res.get_result())
     return result
 
+def btn_res():
+    count_res.get_result()
+    input_log.save_log()
+
 def btn_count_res():
-    btn_count = ttk.Button(text="Посчитать", command = lambda:[count_res.get_result(), input_log().save_log()])
+    btn_count = ttk.Button(text="Посчитать", command = btn_res())
     btn_count.grid(row=2, column=1, padx=10, pady=10)
     print_result(count_res.get_result())
 
