@@ -1,6 +1,6 @@
 import json
 
-with open("C:/GB/Python/homework/lesson09/data_bot.json", "r", encoding="utf-8") as file:
+with open("C:/GB/Python/homework/lesson10/data_bot.json", "r", encoding="utf-8") as file:
     data = json.load(file)["report"]
 
 def read_contact(name):
@@ -41,14 +41,14 @@ def change_contact (name, field, new_data):
     else: comment = dict_contact.get("Comment")
     return (f"Новые данные контакта:\nИмя: {name} \nНомер: {number} \nКатегория: {category} \nКомментарий: {comment}")
 
-def delete_contact(name):
-    dict = {}
-    for i in range(0, len(data), 1):
-        dict = data[i]
-        if name == dict.get("Name"):
-            del data[i]
-            break
-    return data
+# def delete_contact(name):
+#     dict = {}
+#     for i in range(0, len(data), 1):
+#         dict = data[i]
+#         if name == dict.get("Name"):
+#             del data[i]
+#             break
+#     return data
 
 def add_contact (name, number, category, comment):
     dict_contact =  {}

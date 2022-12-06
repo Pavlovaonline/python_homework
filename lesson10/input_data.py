@@ -1,7 +1,7 @@
 import json
 import output_data
 
-with open("C:/GB/Python/homework/lesson09/data_bot.json", "r", encoding="utf-8") as file:
+with open("C:/GB/Python/homework/lesson10/data_bot.json", "r", encoding="utf-8") as file:
     data = json.load(file)["report"]
 
 def save_change(name, field, new_data):
