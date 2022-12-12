@@ -1,135 +1,117 @@
-import re
 import telebot
 import random
+from telebot import types
 
 API_TOKEN = '5911327426:AAFeYcF7b0WuuoDQhPY4Nk9_iwIoS68JVwo'
-
 bot = telebot.TeleBot(API_TOKEN)
-global x
-global y
+item = {}
+gameIsStart = False
+game_field = [" ", " ", " ",
+              " ", " ", " ",
+              " ", " ", " ", ]
+CrossesOrToe = ["0", "X"]
+playerSymbol = CrossesOrToe[random.randint(0, 1)]
+botSymbol = ""
+if (playerSymbol == "0"):
+    botSymbol = "X"
+else:
+    botSymbol = "0"
+print("Bot is start")
+winbool = False
+losebool = False
 
-@bot.message_handler(commands = ['start'])
-def start_message(message):
-    bot.send_message(message.chat.id, "Начало игры")
-    bot.send_message(message.chat.id, "Введите x координаты: ")
+def clear():
+    global game_field
+    game_field = [" ", " ", " ",
+                  " ", " ", " ",
+                  " ", " ", " ", ]
 
-@bot.message_handler(content_types = 'text')
-def read_x(message):
-    global x
-    x = message.text
-    bot.send_message(message.chat.id, f"x={x}\nВведите y координаты: ")
+def human_win(cell_1, cell_2, cell_3):
+    if cell_1 == playerSymbol and cell_2 == playerSymbol and cell_3 == playerSymbol:
+        global winbool
+        winbool = True
 
-@bot.message_handler(content_types = 'text')
-def read_y(message):
-    global y
-    y = message.text
-    bot.send_message(message.chat.id, f"y={y}")
+def bot_win(cell_1, cell_2, cell_3):
+    if cell_1 == botSymbol and cell_2 == botSymbol and cell_3 == botSymbol:
+        global losebool
+        losebool = True
 
-@bot.message_handler(content_types = 'text')
-def read_coord(message):    
-    global x
-    global y
-    bot.send_message(message.chat.id, f"Вы ввели координаты: {x}, {y}")
+def defend(cell_1, cell_2, posDef):
+    if cell_1 == playerSymbol and cell_2 == playerSymbol:
+        posDef = botSymbol
 
-@bot.message_handler(content_types = 'text')
-def print_field_bot (message):
-    bot.send_message(message.chat.id, print_field(field))
-    bot.send_message(message.chat.id, check_game_over())
-    bot.send_message(message.chat.id, "Чтобы начать снова введите /start")
+@bot.message_handler(commands=['start'])
+def welcome(message):
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+    item[0] = types.KeyboardButton("Крестики нолики")
+    markup.add(item[0])
+    if message.text == "/start":
+        bot.send_message(message.chat.id,
+                         "Привет,{0.first_name}!".format(message.from_user, bot.get_me()), parse_mode='html', reply_markup=markup)
 
-# bot.polling()
+@bot.message_handler(content_types=['text'])
+def mess(message):
+    if message.chat.type == 'private':
+        if message.text == "Крестики нолики":
+            global gameIsStart
+            gameIsStart = True
+        else: 
+            bot.send_message(message.chat.id, "Я умею только играть в крестики")
+    if gameIsStart == True:
+        item = {}
+        bot.send_message(message.chat.id, "Игра началась")
+        global markup
+        markup = types.InlineKeyboardMarkup(row_width=3)
+        i = 0
+        for i in range(9):
+            item[i] = types.InlineKeyboardButton(game_field[i], callback_data=str(i))
+        markup.row(item[0], item[1], item[2])
+        markup.row(item[3], item[4], item[5])
+        markup.row(item[6], item[7], item[8])
+        bot.send_message(message.chat.id, "Ваш ход", reply_markup=markup)
 
+@bot.callback_query_handler(func=lambda call: True)
+def callbackInline(call):
+    if (call.message):
+        randomCell = random.randint(0, 8)
+        if game_field[randomCell] == playerSymbol:
+            randomCell = random.randint(0, 8)
+        if game_field[randomCell] == botSymbol:
+            randomCell = random.randint(0, 8)
+        if game_field[randomCell] == " ":
+            game_field[randomCell] = botSymbol
+        for i in range(9):
+            if call.data == str(i):
+                if (game_field[i] == " "):
+                    game_field[i] = playerSymbol
+            if human_win(game_field[0], game_field[1], game_field[2]): break
+            if human_win(game_field[0], game_field[4], game_field[8]): break
+            if human_win(game_field[6], game_field[4], game_field[2]): break
+            if human_win(game_field[6], game_field[7], game_field[8]): break
+            if human_win(game_field[0], game_field[3], game_field[6]): break
+            if bot_win(game_field[0], game_field[1], game_field[2]): break
+            if bot_win(game_field[0], game_field[4], game_field[8]): break
+            if bot_win(game_field[6], game_field[4], game_field[2]): break
+            if bot_win(game_field[6], game_field[7], game_field[8]): break
+            if bot_win(game_field[0], game_field[3], game_field[6]): break
+            item[i] = types.InlineKeyboardButton(game_field[i], callback_data=str(i))
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="Крестики нолики", reply_markup=None)
+        global  markup
+        markup.row(item[0], item[1], item[2])
+        markup.row(item[3], item[4], item[5])
+        markup.row(item[6], item[7], item[8])
+        bot.send_message(call.message.chat.id, "Выберите клетку", reply_markup=markup)
+        global winbool
+        if winbool:
+            clear()
+            bot.send_message(call.message.chat.id, "Вы победили!")
+            winbool = False
+            gameIsStart = False
+        global losebool
+        if losebool:
+            clear()
+            bot.send_message(call.message.chat.id, "Бот победил!")
+            losebool = False
+            gameIsStart = False
 
-field = []
-def print_field (pr_field):
-    for i in range(3):
-        return " ".join(pr_field[i])
-
-for i in range (3):
-    filddraw = []
-    for j in range(3):
-        filddraw.append(".")
-    field.append(filddraw)
-
-def human_move ():
-    global x
-    global y
-    # x_human = x
-    # y_human = y
-    field[x][y] = "o"
-    print_field(field)
-
-def bot_move ():
-    x_bot = random.randint(0,2)
-    y_bot = random.randint(0,2)
-    if field[x_bot][y_bot]!=".":
-        while field[x_bot][y_bot]!=".":
-            x_bot = random.randint(0,2)
-            y_bot = random.randint(0,2)
-        field[x_bot][y_bot] = "x"
-        print_field(field)
-    else: 
-        field[x_bot][y_bot] = "x"
-        print_field(field)
-
-def check_win ():
-    if field[0][0] == "o" and field[0][1] == "o" and field[0][2] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[1][0] == "o" and field[1][1] == "o" and field[1][2] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[2][0] == "o" and field[2][1] == "o" and field[2][2] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[0][0] == "o" and field[1][0] == "o" and field[2][0] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[0][1] == "o" and field[1][1] == "o" and field[2][1] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[0][2] == "o" and field[1][2] == "o" and field[2][2] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[0][0] == "o" and field[1][1] == "o" and field[2][2] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[0][2] == "o" and field[1][1] == "o" and field[2][0] == "o": 
-        game_over = True
-        return "Human win"
-    elif field[0][0] == "x" and field[0][1] == "x" and field[0][2] == "x": 
-        game_over = True
-        return "Bot win"
-    elif field[1][0] == "x" and field[1][1] == "x" and field[1][2] == "x": 
-        game_over = True
-        return "Bot win"
-    elif field[2][0] == "x" and field[2][1] == "x" and field[2][2] == "x": 
-        game_over = True
-        return "Bot win"
-    elif field[0][0] == "x" and field[1][0] == "x" and field[2][0] == "x": 
-        game_over = True
-        return "Bot win"
-    elif field[0][1] == "x" and field[1][1] == "x" and field[2][1] == "x": 
-        return "Bot win"
-    elif field[0][2] == "x" and field[1][2] == "x" and field[2][2] == "x": 
-        game_over = True
-        return "Bot win"
-    elif field[0][0] == "x" and field[1][1] == "x" and field[2][2] == "x": 
-        game_over = True
-        return "Bot win"
-    elif field[0][2] == "x" and field[1][1] == "x" and field[2][0] == "x": 
-        game_over = True
-        return "Bot win"
-    else: 
-        game_over = False
-        return game_over
-
-def check_game_over ():
-    if ("." in filddraw) and (check_win() == False):
-        while ("." in filddraw) and (check_win() == False):
-            human_move()
-            bot_move()
-    else: 
-        return("Game over!")
-
-bot.polling()
+bot.polling(none_stop=True)
